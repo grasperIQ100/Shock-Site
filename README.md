@@ -16,7 +16,7 @@ Welcome to Anarchy Shop! This is a frontend demo built with Tailwind CSS. The we
 ## Demo
 
 ![Anarchy Shop Screenshot](images/ss.png)
-
+[![Preview Site](https://img.shields.io/badge/Preview-Site-blue)](https://demo-2003.netlify.app/)
 ## How to Run
 
 To view this demo locally, follow these steps:
