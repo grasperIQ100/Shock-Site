@@ -1,76 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Tailwind Designing</title>
+    <title>A Tailwind designing</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <style>
-        #sidebar {
-            transition: transform 0.3s ease;
-        }
-
-        #sidebar.hidden {
-            transform: translateX(-100%);
-        }
-    </style>
 </head>
-
 <body class="bg-neutral-900 text-white relative">
     <div class="container min-h-screen text-white px-28 py-10 ">
         <nav class="flex items-center border p-5 ">
             <img src="images/logo.png" class="w-28 h-28 cursor-pointer" />
-            <ul class="flex-1 text-center hidden md:flex">
+            <ul class="flex-1 text-center">
+            <li class="list-none inline-block px-3 bg-white rounded-3xl py-2 font-medium text-black hover:bg-red-700 hover:text-white"> <a href="#" class="px-2">HOME</a> </li>
+            <li class="list-none inline-block px-5 bg-white rounded-3xl py-2 font-medium text-black hover:bg-red-700 hover:text-white"> <a href="#" class="px-2">Contact</a> </li>
+            <li class="list-none inline-block px-5 bg-white rounded-3xl py-2 font-medium text-black hover:bg-red-700 hover:text-white"> <a href="#" class="px-2">About us</a> </li>
+            <li class="list-none inline-block px-5 bg-white rounded-3xl py-2 font-medium text-black hover:bg-red-700 hover:text-white"> <a href="#" class="px-2">Testimonies</a> </li>
 
-                <li class="list-none inline-block px-3 bg-white rounded-3xl py-2 font-medium text-black hover:bg-red-700 hover:text-white"> <a href="#" class="px-2">HOME</a> </li>
-                <li class="list-none inline-block px-5 bg-white rounded-3xl py-2 font-medium text-black hover:bg-red-700 hover:text-white"> <a href="#" class="px-2">Contact</a> </li>
-                <li class="list-none inline-block px-5 bg-white rounded-3xl py-2 font-medium text-black hover:bg-red-700 hover:text-white"> <a href="#" class="px-2">About us</a> </li>
-                <li class="list-none inline-block px-5 bg-white rounded-3xl py-2 font-medium text-black hover:bg-red-700 hover:text-white"> <a href="#" class="px-2">Testimonies</a> </li>
-            </ul>
-            <button class="bg-black rounded-3xl py-3 px-8 font-medium text-white mr-4 hover:bg-red-700 hover:text-white hidden md:inline-block">Log in</button>
-            <button class="md:hidden text-white text-3xl" onclick="toggleSidebar()">
-                <i class="fas fa-bars"></i>
-            </button>
-        </nav>
 
-        <div id="sidebar" class="fixed top-0 left-0 w-64 h-full bg-neutral-800 bg-opacity-90 p-5 hidden md:hidden">
-            <button class="text-white text-3xl mb-5" onclick="toggleSidebar()">
-                <i class="fas fa-times"></i>
-            </button>
-            <ul class="space-y-5">
-                <li class="bg-white rounded-3xl py-2 font-medium text-black hover:bg-red-700 hover:text-white"> <a href="#" class="block px-3">HOME</a> </li>
-                <li class="bg-white rounded-3xl py-2 font-medium text-black hover:bg-red-700 hover:text-white"> <a href="#" class="block px-3">Contact</a> </li>
-                <li class="bg-white rounded-3xl py-2 font-medium text-black hover:bg-red-700 hover:text-white"> <a href="#" class="block px-3">About us</a> </li>
-                <li class="bg-white rounded-3xl py-2 font-medium text-black hover:bg-red-700 hover:text-white"> <a href="#" class="block px-3">Testimonies</a> </li>
-                <li> <button class="bg-black rounded-3xl py-3 px-8 font-medium text-white hover:bg-red-700 hover:text-white w-full">Log in</button> </li>
-            </ul>
-        </div>
+        </ul>
+        <button class="bg-black rounded-3xl py-3 px-8 font-medium text-white mr-4 hover:bg-red-700 hover:text-white">Log in</button>
+    </nav>
 
-        <div class="mt-48">
-            <h1 class="text-6xl font-bold leading-normal">
-                Anarchy Shop <br /> Delivery in 5 min
-            </h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque odio recusandae quam voluptatum <br />
-                voluptate suscipit officiis, natus, tempora eius fuga corrupti iste sed, modi illo! Quo laudantium velit<br />
-                aperiam officia, omnis quasi, inventore nihil, maiores dolorum et magni. Amet consectetur ducimus sed<br />
-                nesciunt? Beatae eligendi minus quam officia, quisquam natus!</p>
-
+    <div class="mt-48">
+        <h1 class="text-6xl font-bold leading-normal">
+            Anarchy Shop <br /> Delivery in 5 min
+        </h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque odio recusandae quam voluptatum <br />
+            voluptate suscipit officiis, natus, tempora eius fuga corrupti iste sed, modi illo! Quo laudantium velit<br />
+            aperiam officia, omnis quasi, inventore nihil, maiores dolorum et magni. Amet consectetur ducimus sed<br />
+            nesciunt? Beatae eligendi minus quam officia, quisquam natus!</p>
+            
             <div class="mt-10">
                 <a href="#" class="bg-red-300 rounded-3xl py-3 px-8 font-medium text-black mr-4 hover:bg-red-700 hover:text-white">Order Now!</a>
                 <a href="#" class="hover:text-red-300">Download App</a>
             </div>
         </div>
-        <img src="images/guy.png" alt="jeans guy" class="md:w-96 xl:w-96 xl:absolute xl:bottom-0 right-24">
-    </div>
-
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('hidden');
-        }
-    </script>
-</body>
-
-</html>
+        <img src="images/guy.png" alt="jeans guy" class="md:w-96 xl:w-96 xl:absolute xl:bottom-0 right-24  ">
+</div>
